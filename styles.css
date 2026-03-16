@@ -85,11 +85,26 @@ header {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
   padding: 0.4rem 5%;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   border-bottom: 1px solid rgba(30, 58, 138, 0.2);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Logo col 1, nav col 2 centered, hamburger col 3 */
+.logo-link,
+.logo {
+  grid-column: 1;
+}
+
+nav {
+  grid-column: 2;
+}
+
+.menu-toggle {
+  grid-column: 3;
+  display: none;
 }
 
 .logo {
@@ -115,14 +130,17 @@ header {
 nav ul {
   display: flex;
   list-style: none;
-  gap: 2.5rem;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
 nav a {
   font-family: 'Space Mono', monospace;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.75px;
   color: var(--text);
   position: relative;
   padding: 0.5rem 0;
@@ -145,7 +163,6 @@ nav a:hover::after {
 
 /* Hamburger Menu */
 .menu-toggle {
-  display: none;
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
@@ -880,9 +897,8 @@ nav a:hover::after {
   border-radius: 50%;
   overflow: hidden;
   border: 3px solid var(--primary);
-
-
 }
+
 .member-photo img {
   width: 100%;
   height: 100%;
@@ -1116,14 +1132,13 @@ nav a:hover::after {
   grid-template-columns: auto 1fr;
   gap: 2rem;
   padding: 2.5rem;
-  margin: 2rem auto; /* centers it */
+  margin: 2rem auto;
   background: var(--white);
   border-radius: 20px;
   border: 1px solid rgba(30, 58, 138, 0.15);
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-
-  max-width: 1300px; /* reduce width here */
+  max-width: 1300px;
 }
 
 .option-card:hover {
@@ -1288,7 +1303,7 @@ nav a:hover::after {
   box-shadow: 0 10px 30px rgba(30, 58, 138, 0.3);
 }
 
-/* Footer (override - from version 2) */
+/* Footer */
 footer {
   background: var(--light);
   padding: 4rem 5% 2rem;
@@ -1350,6 +1365,7 @@ footer {
 .footer-bottom a:hover {
   color: var(--primary);
 }
+
 /* Modal */
 .modal {
   display: none;
@@ -1418,7 +1434,13 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 968px) {
+  header {
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+  }
+
   nav {
+    grid-column: unset;
     position: fixed;
     top: 0;
     right: -100%;
@@ -1442,6 +1464,7 @@ footer {
   }
 
   .menu-toggle {
+    grid-column: unset;
     display: flex;
   }
 
@@ -1501,6 +1524,7 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
 .podcast-page {
   padding: 4rem 0;
 }
@@ -1553,13 +1577,10 @@ footer {
   margin-right: 1rem;
 }
 
-
-
-
 .blog-grid {
   display: flex;
-  flex-direction: column; /* Stack vertically */
-  gap: 60px; /* More spacing between blog cards */
+  flex-direction: column;
+  gap: 60px;
 }
 
 .blog-card {
