@@ -1015,12 +1015,10 @@ nav a:hover::after {
   display: flex;
   align-items: center;
   justify-content: center;
-<<<<<<< HEAD
-=======
-  background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
->>>>>>> 685c4d8 (Initial commit with updates)
+  background-size: contain;        /* changed from default 'cover' */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--light);  /* fills empty space around image */
 }
 
 .placeholder-image {
