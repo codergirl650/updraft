@@ -133,8 +133,37 @@ document.addEventListener('DOMContentLoaded', function() {
     lastScroll = currentScroll;
   });
 });
-<<<<<<< HEAD
-=======
+// Gallery lightbox
+const galleryImgs = document.querySelectorAll('.gallery-img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+let currentIndex = 0;
+
+galleryImgs.forEach((img, index) => {
+  img.addEventListener('click', () => {
+    currentIndex = index;
+    lightboxImg.src = img.src;
+    lightbox.style.display = 'block';
+  });
+});
+
+document.querySelector('.lightbox .prev').addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + galleryImgs.length) % galleryImgs.length;
+  lightboxImg.src = galleryImgs[currentIndex].src;
+});
+
+document.querySelector('.lightbox .next').addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % galleryImgs.length;
+  lightboxImg.src = galleryImgs[currentIndex].src;
+});
+
+document.querySelector('.lightbox .close').addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
+
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) lightbox.style.display = 'none';
+});
 const images = document.querySelectorAll(".gallery-img");
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
@@ -172,4 +201,3 @@ lightbox.onclick = (e) => {
     lightbox.style.display = "none";
   }
 };
->>>>>>> 685c4d8 (Initial commit with updates)
