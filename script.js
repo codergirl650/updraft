@@ -2,8 +2,9 @@
 
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
-  const menuToggle = document.getElementById('menuToggle');
-  const nav = document.getElementById('nav');
+ // Change these two lines:
+const menuToggle = document.querySelector('.menu-toggle'); 
+const nav = document.querySelector('nav');
 
   if (menuToggle && nav) {
     menuToggle.addEventListener('click', function() {
@@ -134,70 +135,34 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 // Gallery lightbox
-const galleryImgs = document.querySelectorAll('.gallery-img');
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-let currentIndex = 0;
-
-galleryImgs.forEach((img, index) => {
-  img.addEventListener('click', () => {
-    currentIndex = index;
-    lightboxImg.src = img.src;
-    lightbox.style.display = 'block';
-  });
-});
-
-document.querySelector('.lightbox .prev').addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + galleryImgs.length) % galleryImgs.length;
-  lightboxImg.src = galleryImgs[currentIndex].src;
-});
-
-document.querySelector('.lightbox .next').addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % galleryImgs.length;
-  lightboxImg.src = galleryImgs[currentIndex].src;
-});
-
-document.querySelector('.lightbox .close').addEventListener('click', () => {
-  lightbox.style.display = 'none';
-});
-
-lightbox.addEventListener('click', (e) => {
-  if (e.target === lightbox) lightbox.style.display = 'none';
-});
+// Gallery lightbox - Single Clean Version
 const images = document.querySelectorAll(".gallery-img");
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
-
+const lb = document.getElementById("lightbox");
+const lbImg = document.getElementById("lightbox-img");
 let currentIndex = 0;
 
-// OPEN IMAGE
-images.forEach((img, index) => {
-  img.addEventListener("click", () => {
-    lightbox.style.display = "block";  // instead of "block"    lightboxImg.src = img.src;
-    currentIndex = index;
+if (images.length > 0 && lb && lbImg) {
+  images.forEach((img, index) => {
+    img.addEventListener("click", () => {
+      lb.style.display = "flex"; // "flex" is usually better for centering
+      lbImg.src = img.src;
+      currentIndex = index;
+    });
   });
-});
 
-// CLOSE
-document.querySelector(".close").onclick = () => {
-  lightbox.style.display = "none";
-};
+  document.querySelector(".lightbox .close").onclick = () => { lb.style.display = "none"; };
 
-// NEXT
-document.querySelector(".next").onclick = () => {
-  currentIndex = (currentIndex + 1) % images.length;
-  lightboxImg.src = images[currentIndex].src;
-};
+  document.querySelector(".lightbox .next").onclick = () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    lbImg.src = images[currentIndex].src;
+  };
 
-// PREV
-document.querySelector(".prev").onclick = () => {
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  lightboxImg.src = images[currentIndex].src;
-};
+  document.querySelector(".lightbox .prev").onclick = () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    lbImg.src = images[currentIndex].src;
+  };
 
-// CLOSE ON BACKGROUND CLICK
-lightbox.onclick = (e) => {
-  if (e.target === lightbox) {
-    lightbox.style.display = "none";
-  }
-};
+  lb.onclick = (e) => {
+    if (e.target === lb) lb.style.display = "none";
+  };
+}
