@@ -29,12 +29,12 @@
         <li><a href="about.html">About Us</a></li>
         <li><a href="program.html">Our Program</a></li>
         <li><a href="team.html">Meet The Team</a></li>
-        <li><a href="projects.html">Student Projects</a></li>
         <li><a href="podcast.html">Podcast</a></li>
         <li><a href="blog.html">Blog</a></li>
 
         <li><a href="contact.html">Get Involved</a></li>
                         <li><a href="accomplishments.html">Our Accomplishments</a></li>
+        <li><a href="resources.html">Resources</a></li>
 
       </ul>
     </nav>
@@ -43,36 +43,14 @@
   <section class="page-hero">
     <div class="container">
       <h1>Our Accomplishments</h1>
-      <p class="page-subtitle">Celebrating our impact and milestones in engineering education. NOTE - this page is not fully updated and is a placeholder. We will continue to update as we conduct more classes!</p>
+      <p class="page-subtitle">Celebrating our impact and milestones in engineering education. We will continue to update as we conduct more classes!</p>
     </div>
   </section>
 
   <section class="content-section">
     <div class="container">
       
-      <!-- Impact Stats -->
-      <div class="stats-section">
-        <h2>Our Impact To Date</h2>
-        <div class="stats-grid">
-          <div class="stat-block">
-            <span class="big-stat">250+</span>
-            <span class="stat-desc">Students Reached</span>
-          </div>
-          <div class="stat-block">
-            <span class="big-stat">2</span>
-            <span class="stat-desc">Workshops Delivered</span>
-          </div>
-          <div class="stat-block">
-            <span class="big-stat">3</span>
-            <span class="stat-desc">Projects Built</span>
-          </div>
-          <div class="stat-block">
-            <span class="big-stat">-</span>
-            <span class="stat-desc">Community Partners</span>
-          </div>
-        </div>
-      </div>
-
+      
       <!-- Timeline of Accomplishments -->
       <div class="content-block">
         <h2>Our Journey</h2>
@@ -185,8 +163,7 @@
             <br>
             <p>
               Recruited and trained 5+ dedicated volunteer mentors and guest speakers from various 
-              engineering disciplines. Our volunteers, combined, have contributed over 200+ hours of their time 
-              to help inspire young minds.
+              engineering disciplines
             </p>
           </div>
 
@@ -196,8 +173,7 @@
             <br>
             <p>
               Facilitated the creation of many student projects including solar ovens, robotic 
-              vehicles, biomedical hand prototypes, and custom software applications. Every student 
-              gets to build, test, and present their work.
+              vehicles, biomedical hand prototypes, and custom games
             </p>
           </div>
 
@@ -207,8 +183,7 @@
             <br>
             <p>
               Maintained our commitment to 100% free programming, providing all materials and 
-              equipment at no cost to families. We've also loaned computers to students who need 
-              them, removing barriers to participation.
+              equipment at no cost
             </p>
           </div>
 
@@ -217,8 +192,7 @@
             <h3>Innovative Curriculum</h3>
             <p>
               Developed a comprehensive engineering curriculum that balances theory with practice, 
-              covering mechanical, electrical, software, and biomedical engineering. Our modules 
-              are continuously refined based on feedback.
+              covering a variety of disciplines
             </p>
           </div>
 
@@ -302,46 +276,61 @@
           Includes pictures from our workshops, field trips, and other events.
         </p>
         <br>
-        <div class="gallery">
-          <img src="e.jpg" class="gallery-img" />
-          <img src="f.jpg" class="gallery-img" />
-          <img src="g.jpg" class="gallery-img" />
-          <img src="d.jpg" class="gallery-img" />
-          <img src="68.jpg" class="gallery-img" />
-          <img src="58.jpg" class="gallery-img" />
-          <img src="64.jpg" class="gallery-img" />
-          <img src="67.jpg" class="gallery-img" />
-          <img src="69.jpg" class="gallery-img" />
-          <img src="62.jpg" class="gallery-img" />
-          <img src="60_2.jpg" class="gallery-img" />
-          <img src="65.jpg" class="gallery-img" />
-          <img src="IMG_5799.jpg" class="gallery-img" />
-          <img src="61.jpg" class="gallery-img" />
-          <img src="59.jpg" class="gallery-img" />
-          <img src="63.jpg" class="gallery-img" />
-          <img src="IMG_9238.jpg" class="gallery-img" />
-          <img src="IMG_9247.jpg" class="gallery-img" />
-          <img src="IMG_9250.jpg" class="gallery-img" />
-          <img src="IMG_9248.jpg" class="gallery-img" />
-          <img src="IMG_9260.jpg" class="gallery-img" />
-          <img src="IMG_9271.jpg" class="gallery-img" />
-          <img src="IMG_9276.jpg" class="gallery-img" />
+        <div id="gallery" class="gallery"></div>
+
+        <div id="lightbox" class="lightbox">
+          <span class="close">&times;</span>
+          <img class="lightbox-img" id="lightbox-img">
+          <div class="nav prev">&#10094;</div>
+          <div class="nav next">&#10095;</div>
         </div>
-      </div>
-      
-     
-      <div id="lightbox" class="lightbox">
-        <span class="close">&times;</span>
-        <img class="lightbox-img" id="lightbox-img">
-        <div class="nav prev">&#10094;</div>
-        <div class="nav next">&#10095;</div>
-      </div>
+        
+        <script>
+          const images = [
+            "f.jpg", "g.jpg", "d.jpg",
+             "58.jpg", "64.jpg", 
+            "62.jpg", "60_2.jpg", "65.jpg",
+             "61.jpg",  "63.jpg",
+            "IMG_9238.jpg", "IMG_9247.jpg", "IMG_9250.jpg",
+            "IMG_9248.jpg",  "IMG_9271.jpg", "IMG_9276.jpg", "IMG_7586.jpeg",
+  "IMG_7586.jpeg",
+  "IMG_3964.jpeg",
+  "IMG_6037.jpeg",
+  "IMG_3969.jpeg",
+  "IMG_3968.jpeg",
+  "IMG_5963.jpeg",
+  "IMG_3881.jpeg",
+  "IMG_7592.jpeg",
+  "IMG_5965.jpeg",
+  "IMG_3884.jpeg",
+  "IMG_7584.jpeg",
+  "IMG_6031.jpeg",
+  "IMG_3945.jpeg",
+  "IMG_3952.jpeg",
+  "IMG_3954.jpeg",
+  "IMG_5946.jpeg",
+  "IMG_5958.jpeg",
+  "IMG_5938.jpeg",
+  "IMG_5960.jpeg",
+  "IMG_3858.jpeg",
+  "jasper.jpg",
+            // Add new photos here — just a filename, e.g. "IMG_9999.jpg"
+          
+          ];
+        
+          const gallery = document.getElementById("gallery");
+          images.forEach(src => {
+            const img = document.createElement("img");
+            img.src = src;
+            img.className = "gallery-img";
+            gallery.appendChild(img);
+          });
+        </script>
 
       <!-- Looking Forward -->
       <div class="cta-box">
         <h3>Ready to Join?</h3>
-        <p>Applications are now open!</p>
-        <a href="contact.html" class="cta-button">Apply Today</a>
+        <a href="contact.html" class="cta-button">Join Today</a>
       </div>
     </div>
 

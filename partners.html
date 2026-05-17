@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Partners & Sponsors - UpDraft Engineering</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="fa.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo-link" aria-label="Go to Home">
+      <img src="logo.png" alt="UpDraft Engineering Logo" class="logo-img" />
+    </a>
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="program.html">Our Program</a></li>
+        <li><a href="team.html">Meet The Team</a></li>
+        <li><a href="projects.html">Student Projects</a></li>
+        <li><a href="podcast.html">Podcast</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Get Involved</a></li>
+        <li><a href="accomplishments.html">Our Accomplishments</a></li>
+        <li><a href="partners.html">Partners & Sponsors</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Partners & Sponsors</h1>
+      <p class="page-subtitle">We're grateful to the organizations that make our mission possible. Their support helps us bring free engineering education to students.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+
+      
+
+      <div class="partner-grid">
+
+        <a href="https://www.icodeschool.com" target="_blank" class="partner-card">
+          <h3>iCode Bee Cave</h3>
+          <p>iCode is a premier coding and STEM education school empowering kids and teens with real-world tech skills. Their Bee Cave location has been a tremendous supporter of our mission to grow the next generation of engineers.</p>
+          <span class="partner-link">Visit Website →</span>
+        </a>
+
+        <a href="https://kreatorslab.ai/" target="_blank" class="partner-card">
+          <h3>Kreators Lab</h3>
+          <p>Kreators Lab is dedicated to inspiring young innovators through creative coding and technology education. Their partnership helps us expand our reach and bring even more hands-on learning to our students.</p>
+          <span class="partner-link">Visit Website →</span>
+        </a>
+
+        <a href="https://laketravislibrary.org/" target="_blank" class="partner-card">
+          <h3>Lake Travis Community Library</h3>
+          <p>The Lake Travis Community Library has generously provided us with space to run our workshops, making our programs accessible to the local community. Libraries like this are the backbone of community learning.</p>
+          <span class="partner-link">Visit Website →</span>
+        </a>
+
+      </div>
+
+      <div class="cta-box" style="margin-top: 5rem;">
+        <h3>Interested in Partnering With Us?</h3>
+        <p>We're always looking for organizations that share our passion for STEM education. Reach out to learn how we can work together.</p>
+        <a href="contact.html" class="cta-button">Get In Touch</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>UpDraft Engineering</h4>
+        <p>Empowering young engineers through hands-on education</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="program.html">Our Program</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="accomplishments.html">Accomplishments</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Get In Touch</h4>
+        <p>Email: <a href="mailto:updraftengineeringteam@gmail.com">updraftengineeringteam@gmail.com</a></p>
+        <p>Follow us at @updraftengineeringatx on Instagram!</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 UpDraft Engineering. A registered 501(c)(3) nonprofit organization.</p>
+    </div>
+  </footer>
+
+  <style>
+    .partner-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .partner-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 2.5rem;
+      background: var(--white);
+      border-radius: 20px;
+      border: 1px solid rgba(30, 58, 138, 0.15);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .partner-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--primary);
+      box-shadow: 0 15px 50px rgba(30, 58, 138, 0.15);
+      color: var(--text);
+    }
+
+    .partner-icon {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .partner-card h3 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .partner-card p {
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    .partner-link {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.85rem;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+  </style>
+
+  <script src="script.js"></script>
+</body>
+</html>

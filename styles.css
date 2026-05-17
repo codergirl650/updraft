@@ -416,6 +416,11 @@ nav a:hover::after {
   padding: 5rem 5%;
   background: var(--light);
 }
+.podcast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 2rem;
+}
 
 .mission-text {
   font-size: 1.3rem;
@@ -1540,7 +1545,7 @@ footer {
 }
 
 .podcast-episode {
-  margin-bottom: 3rem;
+  margin-bottom: 0;
   border: 1px solid rgba(30,58,138,0.15);
   padding: 2rem;
   border-radius: 15px;
@@ -1549,7 +1554,7 @@ footer {
 }
 
 .episode-title {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
   color: var(--primary);
 }
