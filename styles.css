@@ -1705,4 +1705,53 @@ footer {
 
 .prev { left: 20px; }
 .next { right: 20px; }
->>>>>>> 685c4d8 (Initial commit with updates)
+/* Dropdown nav */
+nav ul li.has-dropdown {
+  position: relative;
+}
+
+nav ul li.has-dropdown .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  background: #fff; /* match your site's nav background */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  border-radius: 6px;
+  padding: 6px 0;
+  margin: 0;
+  list-style: none;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  z-index: 100;
+}
+
+nav ul li.has-dropdown:hover .dropdown,
+nav ul li.has-dropdown:focus-within .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+nav ul li.has-dropdown .dropdown li {
+  display: block;
+}
+
+nav ul li.has-dropdown .dropdown li a {
+  display: block;
+  padding: 8px 16px;
+  white-space: nowrap;
+  color: #333; /* match your text color */
+}
+
+nav ul li.has-dropdown .dropdown li a:hover {
+  background: rgba(0,0,0,0.05);
+}
+.button-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
